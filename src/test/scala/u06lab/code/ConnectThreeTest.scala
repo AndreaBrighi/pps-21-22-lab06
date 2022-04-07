@@ -40,12 +40,12 @@ class ConnectThreeTest:
 
   @Test
   def placeAnyTest(): Unit =
-    assertEquals(List(List(Disk(3, 0, X)), List(Disk(2, 0, X)), List(Disk(1, 0, X)), List(Disk(0, 0, X))), placeAnyDisk(List(), X))
+    assertEquals(List(List(Disk(0, 0, X)), List(Disk(1, 0, X)), List(Disk(2, 0, X)), List(Disk(3, 0, X))), placeAnyDisk(List(), X))
 
   @Test
   def placeAnyTest2(): Unit =
     printBoards(placeAnyDisk(List(Disk(0, 0, O)), X))
-    assertEquals(List(List(Disk(0, 0, O), Disk(3, 0, X)), List(Disk(0, 0, O), Disk(2, 0, X)), List(Disk(0, 0, O), Disk(1, 0, X)), List(Disk(0, 0, O), Disk(0, 1, X))), placeAnyDisk(List(Disk(0, 0, O)), X))
+    assertEquals(List(List(Disk(0, 0, O), Disk(0, 1, X)), List(Disk(0, 0, O), Disk(1, 0, X)), List(Disk(0, 0, O), Disk(2, 0, X)), List(Disk(0, 0, O), Disk(3, 0, X))), placeAnyDisk(List(Disk(0, 0, O)), X))
 
   @Test
   def TestIsWinRowWin(): Unit =

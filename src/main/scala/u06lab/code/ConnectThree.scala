@@ -8,7 +8,7 @@ object ConnectThree extends App with TwoPlayerGame:
 
   override def placeAnyDisk(board: Board, player: Player): Seq[Board] =
     for
-      x <- bound to 0 by -1
+      x <- 0 to bound
       y <- firstAvailableRow(board, x)
     yield board :+ Disk(x, y, player)
 

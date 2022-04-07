@@ -6,8 +6,8 @@ object TicTacToe extends App with TwoPlayerGame :
 
   override def placeAnyDisk(board: Board, player: Player): Seq[Board] =
     for
-      x <- bound to 0 by -1
-      y <- bound to 0 by -1
+      x <- 0 to bound
+      y <- 0 to bound
       if find(board, x, y).isEmpty
     yield board :+ Disk(x, y, player)
 
